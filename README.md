@@ -176,3 +176,51 @@ src/main/java/com/music/demo/
 - Default songs are loaded automatically on startup (see `DataLoader.java`)
 - JWT tokens expire after 10 hours
 
+## Frontend
+
+A React frontend is available in the `frontend/` directory. See `frontend/README.md` for setup instructions.
+
+### Quick Start (Frontend)
+
+1. **Install dependencies:**
+   ```bash
+   cd frontend
+   npm install
+   ```
+
+2. **Start the React app:**
+   ```bash
+   npm start
+   ```
+
+   The frontend will run on `http://localhost:3000`
+
+3. **Make sure the backend is running** on `http://localhost:8082` before using the frontend.
+
+### Frontend Features
+
+- User authentication (Login/Register)
+- Browse and search songs
+- Search YouTube for real music and add to library
+- Play YouTube videos directly in the app
+- Create and manage playlists
+- Playback controls
+- Modern, responsive UI
+
+### YouTube Integration
+
+The app now supports **real music playback from YouTube**! **No API key required!**
+
+1. **Add songs with YouTube links** - Click "➕ Add Song with YouTube Link" button
+2. **Paste any YouTube URL** - The app automatically extracts the video ID
+3. **Add song details** - Title, artist, genre, and duration (optional)
+4. **Play music** - Click play on any song with a YouTube video to watch/listen
+
+**Supported YouTube URL formats:**
+- `https://www.youtube.com/watch?v=VIDEO_ID`
+- `https://youtu.be/VIDEO_ID`
+- `https://youtube.com/embed/VIDEO_ID`
+- Or just the video ID itself
+
+**Note:** You need to be logged in as ADMIN to add songs.
+

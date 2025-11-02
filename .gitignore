@@ -54,3 +54,16 @@ local.properties
 # Application specific
 /tmp/
 *.pid
+
+# Frontend build files
+frontend/node_modules/
+frontend/build/
+frontend/.pnp
+frontend/.pnp.js
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local

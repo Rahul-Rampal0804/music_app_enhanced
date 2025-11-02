@@ -10,10 +10,16 @@ public class Song {
     private String artist;
     private String genre;
     private Integer durationSeconds;
+    private String youtubeVideoId;
+    private String thumbnailUrl;
 
     public Song() {}
     public Song(String title, String artist, String genre, Integer durationSeconds){
         this.title = title; this.artist = artist; this.genre = genre; this.durationSeconds = durationSeconds;
+    }
+    public Song(String title, String artist, String genre, Integer durationSeconds, String youtubeVideoId, String thumbnailUrl){
+        this.title = title; this.artist = artist; this.genre = genre; this.durationSeconds = durationSeconds;
+        this.youtubeVideoId = youtubeVideoId; this.thumbnailUrl = thumbnailUrl;
     }
 
     // getters & setters
@@ -27,4 +33,8 @@ public class Song {
     public void setGenre(String genre) { this.genre = genre; }
     public Integer getDurationSeconds() { return durationSeconds; }
     public void setDurationSeconds(Integer durationSeconds) { this.durationSeconds = durationSeconds; }
+    public String getYoutubeVideoId() { return youtubeVideoId; }
+    public void setYoutubeVideoId(String youtubeVideoId) { this.youtubeVideoId = youtubeVideoId; }
+    public String getThumbnailUrl() { return thumbnailUrl; }
+    public void setThumbnailUrl(String thumbnailUrl) { this.thumbnailUrl = thumbnailUrl; }
 }

@@ -13,16 +13,20 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
+import org.springframework.web.cors.CorsConfigurationSource;
 
 @Configuration
 @EnableMethodSecurity
 public class SecurityConfig {
     @Autowired private JwtFilter jwtFilter;
     @Autowired private UserDetailsService userDetailsService;
+    @Autowired private CorsConfigurationSource corsConfigurationSource;
 
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         http.csrf().disable()
+                .cors().configurationSource(corsConfigurationSource)
+                .and()
                 .authorizeHttpRequests()
                 .requestMatchers("/auth/**", "/h2-console/**", "/songs/public", "/songs/search", "/songs/{id}").permitAll()
                 .anyRequest().authenticated()
